@@ -50,9 +50,15 @@ nav a:hover {
 
 /* HEADER + ANIME BG */
 header {
-  height: 100vh;
-  padding-top: 140px;
-  text-align: center;
+  opacity: 1;
+}
+.fade {
+  opacity: 0;
+  transform: translateY(40px);
+}
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .anime-bg {
@@ -156,6 +162,7 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+
 
 
 
