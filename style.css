@@ -34,6 +34,32 @@ nav a:hover {
   color: #00eaff;
   text-shadow: 0 0 10px #00eaff;
 }
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+nav a {
+  position: relative;
+  padding: 6px 0;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #00eaff;
+  transition: width .3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
 
 /* BGM BUTTON */
 #bgm-toggle {
@@ -55,14 +81,28 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
+  align-items: center;
+  gap: 20px;
 }
+
+header h1 {
+  margin: 0;
+  font-size: clamp(36px, 6vw, 64px);
+}
+
+.subtitle {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
 
 }
 .fade {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(30px);
+  transition: opacity .8s ease, transform .8s ease;
 }
+
 .fade.show {
   opacity: 1;
   transform: translateY(0);
@@ -122,7 +162,7 @@ section {
 
 /* container untuk isi */
 .section-inner {
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
 }
 
@@ -143,16 +183,21 @@ h2 {
 
 .skills span,
 .project-card {
+  padding: 18px 24px;
+  border-radius: 16px;
   background: linear-gradient(135deg, #7f00ff, #00eaff);
   color: #000;
-  min-width: 250px;
+  min-width: 220px;
+  max-width: 260px;
   text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  transition: transform .3s, box-shadow .3s;
 }
-
 
 .skills span:hover,
 .project-card:hover {
-  transform: scale(1.1);
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.35);
 }
 
 /* FOOTER */
