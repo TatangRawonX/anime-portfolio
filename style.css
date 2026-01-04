@@ -51,7 +51,13 @@ nav a:hover {
 
 /* HEADER + ANIME BG */
 header {
-  opacity: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
 }
 .fade {
   opacity: 0;
@@ -111,10 +117,15 @@ header {
 
 /* SECTION */
 section {
-  padding: 90px 20px;
+  padding: 120px 20px;
+}
+
+/* container untuk isi */
+.section-inner {
   max-width: 900px;
   margin: auto;
 }
+
 
 h2 {
   text-align: center;
@@ -174,6 +185,7 @@ section {
   background: radial-gradient(circle at top, #12002b, #050014);
   min-height: 100vh;
 }
+
 
 
 
