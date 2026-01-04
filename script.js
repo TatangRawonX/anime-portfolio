@@ -15,13 +15,20 @@ elements.forEach(el => observer.observe(el));
 const bgm = document.getElementById("bgm");
 const btn = document.getElementById("bgm-toggle");
 
-btn.addEventListener("click", () => {
-  if (bgm.paused) {
-    bgm.volume = 0.2;
-    bgm.play();
-    btn.textContent = "🔊";
-  } else {
-    bgm.pause();
-    btn.textContent = "🎵";
+btn.addEventListener("click", async () => {
+  try {
+    if (bgm.paused) {
+      bgm.volume = 0.25;
+      await bgm.play();
+      btn.textContent = "🔊";
+    } else {
+      bgm.pause();
+      btn.textContent = "🎵";
+    }
+  } catch (err) {
+    console.error("Audio error:", err);
+    alert("Audio gagal diputar. Pastikan bgm.mp3 ada.");
   }
 });
+
+
