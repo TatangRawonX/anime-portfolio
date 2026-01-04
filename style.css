@@ -186,33 +186,6 @@ h2 {
   margin-bottom: 40px;
 }
 
-/* SKILLS */
-.skills, .projects {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.skills span,
-.project-card {
-  padding: 18px 24px;
-  border-radius: 16px;
-  background: linear-gradient(135deg, #7f00ff, #00eaff);
-  color: #000;
-  min-width: 220px;
-  max-width: 260px;
-  text-align: center;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-  transition: transform .3s, box-shadow .3s;
-}
-
-.skills span:hover,
-.project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.35);
-}
-
 /* FOOTER */
 footer {
   text-align: center;
@@ -238,6 +211,44 @@ section {
 }
 #opacity-control {
   background: red !important;
+}
+
+/* ===== JAWIR SECTION ===== */
+#jawir {
+  background: radial-gradient(circle at top, #12002b, #050014);
+}
+
+#jawir .section-inner {
+  text-align: center;
+}
+
+#jawir .section-desc {
+  max-width: 600px;
+  margin: 20px auto 50px;
+  opacity: 0.85;
+  line-height: 1.6;
+}
+
+/* isi jawir */
+.jawir-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.jawir-card {
+  padding: 24px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #7f00ff, #00eaff);
+  color: #000;
+  font-weight: 600;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  transition: transform .3s, box-shadow .3s;
+}
+
+.jawir-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.5);
 }
 
 
