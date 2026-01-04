@@ -197,7 +197,7 @@ footer {
 .fade {
   opacity: 0;
   transform: translateY(40px);
-  transition: 1s;
+  transition: opacity .8s ease, transform .8s ease;
 }
 
 .fade.show {
@@ -256,6 +256,52 @@ section {
 .jawir-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 50px rgba(0,0,0,0.55);
+}
+
+/* ===== NGONTOL SECTION FIX ===== */
+#ngontol {
+  background: radial-gradient(circle at top, #150022, #0a0012);
+}
+
+#ngontol .section-inner {
+  text-align: center;
+}
+
+/* Judul */
+.ngontol-title {
+  margin-bottom: 18px;
+  font-size: clamp(30px, 5vw, 48px);
+}
+
+/* Deskripsi */
+.ngontol-desc {
+  max-width: 680px;
+  margin: 0 auto 50px;
+  opacity: 0.85;
+  line-height: 1.6;
+}
+
+/* Grid */
+.ngontol-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 26px;
+}
+
+/* Card */
+.ngontol-card {
+  padding: 24px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #8c00ff, #00eaff);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  color: #000;
+  font-weight: 600;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.ngontol-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.55);
 }
 
 
