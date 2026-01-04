@@ -1,57 +1,36 @@
-// Fade animation
-const elements = document.querySelectorAll(".fade");
+// ================= FADE IN =================
+const fades = document.querySelectorAll(".fade");
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    }
-  });
-}, { threshold: 0.3 });
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  },
+  { threshold: 0.3 }
+);
 
-elements.forEach(el => observer.observe(el));
+fades.forEach(el => observer.observe(el));
 
-// ===== BGM SAFE HANDLER =====
-const bgm = document.getElementById("bgm");
-const btn = document.getElementById("bgm-toggle");
+// ================= BGM SAFE =================
+const bgmEl = document.getElementById("bgm");
+const bgmBtn = document.getElementById("bgm-toggle");
 
-if (bgm && btn) {
-  btn.addEventListener("click", async () => {
+if (bgmEl && bgmBtn) {
+  bgmBtn.addEventListener("click", async () => {
     try {
-      if (bgm.paused) {
-        bgm.volume = 0.8;
-        await bgm.play();
-        btn.textContent = "🔊";
+      if (bgmEl.paused) {
+        bgmEl.volume = 0.7;
+        await bgmEl.play();
+        bgmBtn.textContent = "🔊";
       } else {
-        bgm.pause();
-        btn.textContent = "🎵";
+        bgmEl.pause();
+        bgmBtn.textContent = "🎵";
       }
     } catch (e) {
-      console.error("Audio error:", e);
+      console.error("BGM error:", e);
     }
   });
 }
-
-
-// BGM toggle
-const bgm = document.getElementById("bgm");
-const btn = document.getElementById("bgm-toggle");
-
-btn.addEventListener("click", async () => {
-  try {
-    if (bgm.paused) {
-      bgm.volume = 0.25;
-      await bgm.play();
-      btn.textContent = "🔊";
-    } else {
-      bgm.pause();
-      btn.textContent = "🎵";
-    }
-  } catch (err) {
-    console.error("Audio error:", err);
-    alert("Audio gagal diputar. Pastikan bgm.mp3 ada.");
-  }
-});
-
-
-
