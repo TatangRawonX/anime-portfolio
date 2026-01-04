@@ -55,12 +55,7 @@ header {
 }
 
 .anime-bg {
-  background:
-    linear-gradient(
-      rgba(127,0,255,0.3),
-      rgba(0,234,255,0.3)
-    ),
-    url("https://raw.githubusercontent.com/akabab/small-anime-images/master/images/102.jpg");
+  background: url("https://raw.githubusercontent.com/akabab/small-anime-images/master/images/102.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -158,4 +153,5 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+
 
