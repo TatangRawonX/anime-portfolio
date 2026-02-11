@@ -1,121 +1,70 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IoT Development</title>
-
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- Anti favicon error -->
-  <link rel="icon" href="data:,">
-
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tatang Rawon</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f8f8;
+            padding: 20px;
+        }
+        .form-container {
+            max-width: 400px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 15px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
 </head>
 <body>
 
-<nav>
-  <a href="#beranda">Beranda</a>
-  <a href="#tentang">tentang</a>
-  <a href="#arsip">Arsip</a>
-  <a href="#log">Log</a>
-</nav>
+<div class="form-container">
+    <h2>masukan text</h2>
+    
+    <form action="#" method="POST">
+        <div class="form-group">
+            <label for="nama">Text name</label>
+            <input type="text" id="nama" name="nama" placeholder="Masukkan nama kamu" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="contoh@mail.com" required>
+        </div>
 
-<!-- BGM -->
-<audio id="bgm" preload="auto" loop>
-  <source src="bgm.mp3" type="audio/mpeg">
-</audio>
-
-<button id="bgm-toggle">🎵</button>
-
-<div id="opacity-control">
-  <label for="opacityRange">BG Opacity</label>
-  <input
-    type="range"
-    id="opacityRange"
-    min="0"
-    max="0.8"
-    step="0.01"
-    value="0.25"
-  >
+        <button type="submit">Kirim</button>
+    </form>
 </div>
 
-  
-<header id="beranda" class="fade anime-bg">
-  <h1 class="glitch" data-text="Tatang Rawon">Tatang Rawon</h1>
-  <p class="subtitle">Website • Deskripsi • IoT</p>
-</header>
-
-<section id="tentang" class="fade">
-  <div class="section-inner">
-    <h2>Tentang gw</h2>
-    <p>
-      Website ini dibuat hanya sebagai penyimpanan log dari sistem IoT alat pembasmi hama dan mungkin terbuka untuk publik, segala publikasi tidak dipungut biaya apapun.
-    </p>
-  </div>
-</section>
-  
-
-<section id="arsip" class="fade">
-  <div class="section-inner">
-
-    <h2 class="arsip-title">Arsip</h2>
-
-    <p class="arsip-desc">
-      FIX BUG TERBARU
-    </p>
-
-    <div class="arsip-grid">
-      <div class="arsip-card">Histori Sensor Ultrasonik</div>
-      <div class="arsip-card"> Histori Sensor Pir </div>
-      <div class="arsip-card">Histori Pengambilan Data</div>
-    </div>
-
-  </div>
-</section>
-
-
-<section id="log" class="fade">
-  <div class="section-inner">
-
-    <h2 class="log-title">log</h2>
-
-    <p class="log-desc">
-     Perbaikan Terbaru
-    </p>
-
-    <div class="log-grid">
-      <div class="log-card">ESP 32</div>
-      <div class="log-card">Arduino IDE</div>
-      <div class="log-card">PLTS</div>
-      <div class="log-card">Internet of Things</div>
-    </div>
-
-  </div>
-</section>
-
-
-<footer>
-  <p>© 2026 Politeknik Negeri Jember</p>
-</footer>
-
-<script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
